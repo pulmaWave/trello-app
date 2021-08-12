@@ -14,6 +14,7 @@ Clone project and run test
 ```
 $ git clone https://github.com/pulmaWave/trello-app.git
 $ cd trello-app
+$ npm install
 $ npm start
 ```
 
