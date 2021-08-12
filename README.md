@@ -1,10 +1,13 @@
+
 # ReactJS + Hooks + Redux to building an app like Trello from scratch
 
 
 ## Requirement
 
-nodejs >> v14.17.0***
-npm >> v6.14.13***
+
+* ***nodejs >> v14.17.0***
+* ***npm >> v6.14.13***
+
 
 Clone project and run test
 
@@ -15,5 +18,6 @@ $ npm start
 ```
 
 ### My information
-https://www.facebook.com/bunmamkeyy
-https://www.instagram.com/000.00nct/
+
+* ***https://www.facebook.com/bunmamkeyy***
+* ***https://www.instagram.com/000.00nct/***
