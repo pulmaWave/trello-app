@@ -4,6 +4,7 @@
 $navbar-app-bg-color: #006dacc7;
 
 .navbar-app {
+    height: $navbar-app-height;
     padding-left: $gap;
     display: flex;
     align-items: center;
