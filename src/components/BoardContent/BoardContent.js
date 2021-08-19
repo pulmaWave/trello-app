@@ -54,7 +54,6 @@ const BoardContent = () => {
       currentColumn.cards = applyDrag(currentColumn.cards, dropResult)
       currentColumn.cardOrder = currentColumn.cards.map((i) => i.id)
       setColumns(newColumns)
-      console.log(currentColumn)
     }
   }
 
