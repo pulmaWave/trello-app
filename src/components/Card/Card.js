@@ -11,7 +11,7 @@ const Task = (props) => {
           src={card.cover}
           className="card-cover"
           alt="men in black"
-          onMouseDown={(e) => e.preventDefault}
+          onMouseDown={(e) => e.preventDefault()}
         />
       )}
       {card.title}

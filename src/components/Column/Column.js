@@ -5,11 +5,8 @@ import Card from 'components/Card/Card'
 import { mapOrder } from 'utilities/sort'
 
 const Column = (props) => {
-  const { column } = props
+  const { column, onCardDrop } = props
   const cards = mapOrder(column.cards, column.cardOrder, 'id')
-  const onCardDrop = (dropResult) => {
-    console.log(dropResult)
-  }
 
   return (
     <div className="column">
@@ -17,7 +14,7 @@ const Column = (props) => {
       <div className="card-list">
         <Container
           groupName="col"
-          onDrop={onCardDrop}
+          onDrop={(dropResult) => onCardDrop(column.id, dropResult)}
           getChildPayload={(index) => cards[index]}
           dragClass="card-ghost"
           dropClass="card-ghost-drop"
@@ -37,7 +34,11 @@ const Column = (props) => {
           })}
         </Container>
       </div>
-      <footer>Add another card</footer>
+      <footer>
+        <div className="footer-actions">
+          <i className="fa fa-plus icon" /> Add another card
+        </div>
+      </footer>
     </div>
   )
 }
