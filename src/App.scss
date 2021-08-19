@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@400;600&display=swap");
 @import "_setting.scss";
 
 body {
     margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 1.3em;
 }
@@ -12,4 +13,8 @@ body {
     line-height: 1.3em;
     background-color: $board-bg-color;
     overflow: hidden;
+    .icon {
+        font-size: 14px;
+        margin-right: 3px;
+    }
 }

@@ -2,6 +2,7 @@
 
 .board-content {
     height: $board-content-height;
+    padding-right: $gap;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -19,5 +20,19 @@
         background-color: rgba(150, 150, 200, 0.1);
         border: 1px dashed #abc;
         margin: 5px 45px 5px 5px;
+    }
+    .add-new-column {
+        cursor: pointer;
+        height: 32px;
+        line-height: 32px;
+        width: 285px;
+        color: $white-color;
+        margin-left: $gap;
+        padding: 4px 0 4px 15px;
+        background-color: hsla(0, 0, 100, 0.24);
+        border-radius: $card-border-radius;
+        &:hover {
+            background-color: hsla(0, 0, 100, 0.34);
+        }
     }
 }

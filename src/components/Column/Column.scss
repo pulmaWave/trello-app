@@ -1,23 +1,22 @@
 @import "_setting.scss";
 
-// Color
-$column-text-color: #333;
-
 // Spacing
 $column-header-height: 36px;
-$column-footer-height: 36px;
+$column-footer-height: 46px;
 $column-border-radius: 5px;
 $column-height: calc(#{$board-content-height} - #{$gap * 2});
 
 .column {
     flex: 0 0 auto;
-    width: 300px;
+    width: $column-width;
     margin-left: $gap;
     height: $column-height;
     > * {
         background-color: $column-bg-color;
-        color: $column-text-color;
         padding: 0 8px;
+    }
+    .column-drag-handle {
+        box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
     }
 }
 header {
@@ -30,11 +29,23 @@ header {
     border-top-right-radius: $column-border-radius;
 }
 footer {
-    padding-left: 10px;
+    padding-left: $gap;
     height: $column-footer-height;
     line-height: $column-footer-height;
     border-bottom-left-radius: $column-border-radius;
     border-bottom-right-radius: $column-border-radius;
+    .footer-actions {
+        display: flex;
+        align-items: center;
+        height: calc(#{$column-footer-height} - #{$gap});
+        padding-left: $gap;
+        cursor: pointer;
+        color: $text-color-faint;
+        &:hover {
+            background-color: $bg-color-faint;
+            color: $text-color-main;
+        }
+    }
 }
 .card-list {
     margin: 0;
@@ -53,13 +64,16 @@ footer {
     .card-ghost {
         transition: transform 0.18s ease;
         transform: rotateZ(5deg);
+        box-shadow: rgba(149, 157, 165, 1) 0px 5px 10px;
     }
     .card-ghost-drop {
+        box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
         transition: transform 0.18s ease-in-out;
         transform: rotateZ(0deg);
     }
     .card-drop-preview {
         background-color: rgba(150, 150, 200, 0.1);
+        box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
         border: 1px dashed #abc;
         margin: 5px;
     }
